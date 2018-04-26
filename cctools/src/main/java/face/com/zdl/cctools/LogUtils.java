@@ -282,7 +282,7 @@ public class LogUtils {
                 Log.i(tag, msg, tr);
             }
             if (log2FileSwitch) {
-//                log2File(type, tag, msg + '\n' + Log.getStackTraceString(tr));
+                log2File(type, tag, msg + '\n' + Log.getStackTraceString(tr));
             }
         }
     }
@@ -294,28 +294,28 @@ public class LogUtils {
      * @param tag     标签
      * @param content 内容
      **/
-//    private synchronized static void log2File(final char type, final String tag, final String content) {
-//        if (content == null) return;
-//        Date now = new Date();
-//        String date = new SimpleDateFormat("MM-dd", Locale.getDefault()).format(now);
-//        final String fullPath = dir + date + ".txt";
-//        if (!FileUtils.createOrExistsFile(fullPath)) return;
-//        String time = new SimpleDateFormat("MM-dd HH:mm:ss.SSS", Locale.getDefault()).format(now);
-//        final String dateLogContent = time + ":" + type + ":" + tag + ":" + content + '\n';
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                BufferedWriter bw = null;
-//                try {
-//                    bw = new BufferedWriter(new FileWriter(fullPath, true));
-//                    bw.write(dateLogContent);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                } finally {
-//                    CloseUtils.closeIO(bw);
-//                }
-//            }
-//        }).start();
-//
-//    }
+    private synchronized static void log2File(final char type, final String tag, final String content) {
+        if (content == null) return;
+        Date now = new Date();
+        String date = new SimpleDateFormat("MM-dd", Locale.getDefault()).format(now);
+        final String fullPath = dir + date + ".txt";
+        if (!FileUtils.createOrExistsFile(fullPath)) return;
+        String time = new SimpleDateFormat("MM-dd HH:mm:ss.SSS", Locale.getDefault()).format(now);
+        final String dateLogContent = time + ":" + type + ":" + tag + ":" + content + '\n';
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                BufferedWriter bw = null;
+                try {
+                    bw = new BufferedWriter(new FileWriter(fullPath, true));
+                    bw.write(dateLogContent);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    CloseUtils.closeIO(bw);
+                }
+            }
+        }).start();
+
+    }
 }
