@@ -5,17 +5,18 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.zdl.utils.ConstUtils.REGEX_DATE;
-import static com.zdl.utils.ConstUtils.REGEX_EMAIL;
-import static com.zdl.utils.ConstUtils.REGEX_ID_CARD15;
-import static com.zdl.utils.ConstUtils.REGEX_ID_CARD18;
-import static com.zdl.utils.ConstUtils.REGEX_IP;
-import static com.zdl.utils.ConstUtils.REGEX_MOBILE_EXACT;
-import static com.zdl.utils.ConstUtils.REGEX_MOBILE_SIMPLE;
-import static com.zdl.utils.ConstUtils.REGEX_TEL;
-import static com.zdl.utils.ConstUtils.REGEX_URL;
-import static com.zdl.utils.ConstUtils.REGEX_USERNAME;
-import static com.zdl.utils.ConstUtils.REGEX_ZH;
+import static face.com.zdl.cctools.ConstUtils.REGEX_DATE;
+import static face.com.zdl.cctools.ConstUtils.REGEX_EMAIL;
+import static face.com.zdl.cctools.ConstUtils.REGEX_ID_CARD15;
+import static face.com.zdl.cctools.ConstUtils.REGEX_ID_CARD18;
+import static face.com.zdl.cctools.ConstUtils.REGEX_IP;
+import static face.com.zdl.cctools.ConstUtils.REGEX_MOBILE_EXACT;
+import static face.com.zdl.cctools.ConstUtils.REGEX_MOBILE_SIMPLE;
+import static face.com.zdl.cctools.ConstUtils.REGEX_TEL;
+import static face.com.zdl.cctools.ConstUtils.REGEX_URL;
+import static face.com.zdl.cctools.ConstUtils.REGEX_USERNAME;
+import static face.com.zdl.cctools.ConstUtils.REGEX_ZH;
+
 
 /**
  * desc  : 正则相关工具类

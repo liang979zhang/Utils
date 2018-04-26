@@ -20,7 +20,8 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
-import static com.zdl.utils.ConstUtils.KB;
+import static face.com.zdl.cctools.ConstUtils.KB;
+
 
 //        zipFiles           : 批量压缩文件
 //        zipFile            : 压缩文件

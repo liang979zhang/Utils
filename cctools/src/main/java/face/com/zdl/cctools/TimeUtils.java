@@ -2,19 +2,20 @@ package face.com.zdl.cctools;
 
 import android.annotation.SuppressLint;
 
-import com.zdl.utils.ConstUtils.TimeUnit;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-import static com.zdl.utils.ConstUtils.DAY;
-import static com.zdl.utils.ConstUtils.HOUR;
-import static com.zdl.utils.ConstUtils.MIN;
-import static com.zdl.utils.ConstUtils.MSEC;
-import static com.zdl.utils.ConstUtils.SEC;
+import face.com.zdl.cctools.ConstUtils.TimeUnit;
+
+import static face.com.zdl.cctools.ConstUtils.DAY;
+import static face.com.zdl.cctools.ConstUtils.HOUR;
+import static face.com.zdl.cctools.ConstUtils.MIN;
+import static face.com.zdl.cctools.ConstUtils.MSEC;
+import static face.com.zdl.cctools.ConstUtils.SEC;
+
 
 /**
  * Created by 89667 on 2018/3/5.

@@ -9,7 +9,6 @@ import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.zdl.utils.AppUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,6 +19,8 @@ import java.util.Enumeration;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+
+import face.com.zdl.cctools.AppUtils;
 
 /**
  * Created by 89667 on 2018/3/14.
