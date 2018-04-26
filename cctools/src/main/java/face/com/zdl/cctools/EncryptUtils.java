@@ -17,8 +17,8 @@ import javax.crypto.Cipher;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
-import static com.zdl.utils.ConvertUtils.bytes2HexString;
-import static com.zdl.utils.ConvertUtils.hexString2Bytes;
+import static face.com.zdl.cctools.ConvertUtils.bytes2HexString;
+import static face.com.zdl.cctools.ConvertUtils.hexString2Bytes;
 //        encryptMD2, encryptMD2ToString                         : MD2加密
 //        encryptMD5, encryptMD5ToString                         : MD5加密
 //        encryptMD5File, encryptMD5File2String                  : MD5加密文件

@@ -1,8 +1,9 @@
 package face.com.zdl.cctools;
 
+import android.annotation.SuppressLint;
+
 import org.apache.commons.lang3.StringUtils;
 
-import java.security.InvalidParameterException;
 import java.security.InvalidParameterException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -211,6 +212,7 @@ public class DateUtil {
      * @param
      * @return date
      */
+    @SuppressLint("WrongConstant")
     public static Date getLastDayOfWeek(Date date) {
         if (date == null) {
             return null;

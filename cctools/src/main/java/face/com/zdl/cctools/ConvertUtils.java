@@ -18,10 +18,10 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 
-import static com.zdl.utils.ConstUtils.BYTE;
-import static com.zdl.utils.ConstUtils.GB;
-import static com.zdl.utils.ConstUtils.KB;
-import static com.zdl.utils.ConstUtils.MB;
+import static face.com.zdl.cctools.ConstUtils.BYTE;
+import static face.com.zdl.cctools.ConstUtils.GB;
+import static face.com.zdl.cctools.ConstUtils.KB;
+import static face.com.zdl.cctools.ConstUtils.MB;
 
 /**
  * <pre>
