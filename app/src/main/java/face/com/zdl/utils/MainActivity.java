@@ -3,8 +3,6 @@ package face.com.zdl.utils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import face.com.zdl.cctools.AppUtils;
-import face.com.zdl.cctools.SPUtils;
 
 
 public class MainActivity extends AppCompatActivity {
