@@ -301,7 +301,7 @@ public class PermissionUtil {
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             onGranted();
-            mPermissionResultCallBack.onPermissionGranted(permissions);
+            mPermissionResultCallBack.onPerAllowList(permissions);
             onResult(toPermissionList(permissions), new ArrayList<PermissionInfo>(), new ArrayList<PermissionInfo>());
             return false;
         }
@@ -458,7 +458,7 @@ public class PermissionUtil {
      */
     private void onGranted() {
         if (mPermissionResultCallBack != null) {
-            mPermissionResultCallBack.onPermissionGranted();
+            mPermissionResultCallBack.onPerAllAllow();
         }
     }
 
@@ -473,7 +473,7 @@ public class PermissionUtil {
             permissions[i] = list.get(i).getName();
         }
 
-        mPermissionResultCallBack.onPermissionGranted(permissions);
+        mPermissionResultCallBack.onPerAllowList(permissions);
     }
 
     /**
@@ -493,7 +493,7 @@ public class PermissionUtil {
             permissions[i] = list.get(i).getName();
         }
 
-        mPermissionResultCallBack.onPermissionDenied(permissions);
+        mPermissionResultCallBack.onPerNegativeAndNoRemind(permissions);
     }
 
     /**
@@ -512,7 +512,7 @@ public class PermissionUtil {
         for (int i = 0; i < list.size(); i++) {
             permissions[i] = list.get(i).getName();
         }
-        mPermissionResultCallBack.onRationalShow(permissions);
+        mPermissionResultCallBack.onPerNegativeAndRemind(permissions);
     }
 
     /**

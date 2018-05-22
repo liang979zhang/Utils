@@ -18,9 +18,6 @@ import java.util.Locale;
 
 /**
  * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 16/11/13
  *     desc  : 定位相关工具类
  * </pre>
  */

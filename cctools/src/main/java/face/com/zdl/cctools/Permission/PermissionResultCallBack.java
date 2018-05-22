@@ -10,14 +10,14 @@ public interface PermissionResultCallBack {
     /**
      * 当所有权限的申请被用户同意之后,该方法会被调用
      */
-    void onPermissionGranted();
+    void onPerAllAllow();
 
     /**
      * 返回此次申请中通过的权限列表
      *
      * @param permissions
      */
-    void onPermissionGranted(String... permissions);
+    void onPerAllowList(String... permissions);
 
     /**
      * 当权限申请中的某一个或多个权限,在此次申请中被用户否定了,并勾选了不再提醒选项时（权限的申请窗口不能再弹出，
@@ -26,7 +26,7 @@ public interface PermissionResultCallBack {
      *
      * @param permissions
      */
-    void onPermissionDenied(String... permissions);
+    void onPerNegativeAndNoRemind(String... permissions);
 
     /**
      * 当权限申请中的某一个或多个权限,在此次申请中被用户否定了,但没有勾选不再提醒选项时（权限申请窗口还能再次申请弹出）
@@ -35,5 +35,5 @@ public interface PermissionResultCallBack {
      *
      * @param permissions
      */
-    void onRationalShow(String... permissions);
+    void onPerNegativeAndRemind(String... permissions);
 }

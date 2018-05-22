@@ -6,23 +6,26 @@ package face.com.zdl.cctools.Permission;
  */
 
 public class PermissionResultAdapter implements PermissionResultCallBack {
+
     @Override
-    public void onPermissionGranted() {
+    public void onPerAllAllow() {
 
     }
 
     @Override
-    public void onPermissionGranted(String... permissions) {
+    public void onPerAllowList(String... permissions) {
 
     }
 
     @Override
-    public void onPermissionDenied(String... permissions) {
+    public void onPerNegativeAndNoRemind(String... permissions) {
 
     }
 
     @Override
-    public void onRationalShow(String... permissions) {
+    public void onPerNegativeAndRemind(String... permissions) {
 
     }
+
+
 }

@@ -25,6 +25,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 
 
 //       getFileByPath : 根据文件路径获取文件
@@ -1405,5 +1406,15 @@ public class FileUtils {
 
         int filePosi = filePath.lastIndexOf(File.separator);
         return (filePosi == -1) ? "" : filePath.substring(0, filePosi);
+    }
+
+
+    /**
+     * 随机生产文件名
+     *
+     * @return
+     */
+    public static String generateFileName() {
+        return UUID.randomUUID().toString();
     }
 }
