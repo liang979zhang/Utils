@@ -21,10 +21,13 @@ import java.util.Map;
 
 /**
  * Created by 89667 on 2018/3/14.
+ *
+ * 必须在自己项目的AndroidManifest中 HelpActivity
+ *
+ *
  */
 
 public class PermissionUtil {
-
 
 
     public final static String TAG = "PermissionUtil";
