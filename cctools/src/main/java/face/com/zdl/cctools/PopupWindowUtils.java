@@ -290,14 +290,4 @@ private void showPopBottom() {
 				.create().showAsDropDown(mButton4, 0, 20);
 	}
 *
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
 * */
