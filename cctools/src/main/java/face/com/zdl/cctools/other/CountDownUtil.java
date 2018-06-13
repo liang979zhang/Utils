@@ -175,7 +175,7 @@ public class CountDownUtil {
  * 使用方法
  */
 
-// new CountDownUtil(btnIdentify)
+// new CountDownUtil(TextView)
 //         .setCountDownMillis(5000)//倒计时60000ms
 //         .setCountDownColor(android.R.color.holo_blue_light, android.R.color.darker_gray)//不同状态字体颜色
 //         .setOnClickListener(new View.OnClickListener() {

@@ -6,7 +6,13 @@ package face.com.zdl.cctools;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Base64;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Map;
 //        SPUtils    : SPUtils构造函数
 //        putString  : SP中写入String类型value
@@ -234,5 +240,63 @@ public class SPUtils {
      */
     public void clear() {
         editor.clear().apply();
+    }
+
+
+    /**
+     * 保存对象
+     * @param t
+     * @param keyName
+     * @param <T>
+     */
+    public <T> void saveBean(T t, String keyName) {
+        ByteArrayOutputStream bos;
+        ObjectOutputStream oos = null;
+        try {
+            bos = new ByteArrayOutputStream();
+            oos = new ObjectOutputStream(bos);
+            oos.writeObject(t);
+            byte[] bytes = bos.toByteArray();
+            String ObjStr = Base64.encodeToString(bytes, Base64.DEFAULT);
+            editor.putString(keyName, ObjStr);
+            editor.commit();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (oos != null) {
+                try {
+                    oos.flush();
+                    oos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+
+    public <T extends Object> T getBeanFromSp(String keyNme) {
+        byte[] bytes = Base64.decode(sp.getString(keyNme, ""), Base64.DEFAULT);
+        ByteArrayInputStream bis;
+        ObjectInputStream ois = null;
+        T obj = null;
+        try {
+            bis = new ByteArrayInputStream(bytes);
+            ois = new ObjectInputStream(bis);
+            obj = (T) ois.readObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            if (ois != null) {
+                try {
+                    ois.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return obj;
     }
 }

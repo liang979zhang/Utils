@@ -28,10 +28,7 @@ public class MainActivity extends AppCompatActivity {
 //        rl.setRotationX(70);
         rl.setRotationY(50);
         rl2.setRotationY(-50);
-//        rl.setY(10);
 
-
-//        ll_ll.setRotationY(70);
 
 
 

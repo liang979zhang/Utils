@@ -19,47 +19,48 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
-        android:layout_marginLeft="-10dp"
         android:id="@+id/rl"
-        android:layout_marginTop="200dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="200dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginTop="200dp">
 
 
         <LinearLayout
             android:id="@+id/ll_ll"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
 
             <!--<RelativeLayout-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content">-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
 
 
-                <LinearLayout
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv"
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:orientation="horizontal"
-                    android:visibility="visible">
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/fujintu3" />
 
-                    <ImageView
-                        android:id="@+id/iv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@mipmap/fujintu3" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/fujintu3" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@mipmap/fujintu3" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@mipmap/fujintu3" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/fujintu3" />
 
 
-                </LinearLayout>
+            </LinearLayout>
 
 
             <!--</RelativeLayout>-->
@@ -68,20 +69,20 @@
         </LinearLayout>
 
 
-
-
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_marginRight="-10dp"
         android:id="@+id/rl2"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="200dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="200dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-10dp"
+        android:layout_marginTop="200dp"
+        android:visibility="visible">
 
 
         <LinearLayout
+            android:layout_centerVertical="true"
             android:id="@+id/ll_ll2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -121,8 +122,6 @@
 
 
         </LinearLayout>
-
-
 
 
     </RelativeLayout>
