@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:onClick="onclik"
         android:text="Hello World!"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -27,7 +27,6 @@
 
 
         <LinearLayout
-            android:id="@+id/ll_ll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true">
@@ -37,30 +36,63 @@
             <!--android:layout_height="wrap_content">-->
 
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:visibility="visible">
+                android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/iv"
+
+                <LinearLayout
+                    android:id="@+id/ll_ll"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@mipmap/fujintu3" />
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
 
-                <ImageView
+                    <ImageView
+                        android:id="@+id/iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ll2"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@mipmap/fujintu3" />
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@mipmap/fujintu3" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
 
 
-            </LinearLayout>
+                </LinearLayout>
+
+            </FrameLayout>
 
 
             <!--</RelativeLayout>-->
@@ -82,10 +114,10 @@
 
 
         <LinearLayout
-            android:layout_centerVertical="true"
-            android:id="@+id/ll_ll2"
+            android:id="@+id/ll_ll3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
 
             <!--<RelativeLayout-->
             <!--android:layout_width="wrap_content"-->
@@ -99,7 +131,6 @@
                 android:visibility="visible">
 
                 <ImageView
-                    android:id="@+id/iv2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@mipmap/fujintu3" />
