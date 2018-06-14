@@ -114,42 +114,67 @@
 
 
         <LinearLayout
-            android:id="@+id/ll_ll3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true">
 
-            <!--<RelativeLayout-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content">-->
 
-
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:visibility="visible">
+                android:layout_height="wrap_content">
 
-                <ImageView
+
+                <LinearLayout
+                    android:id="@+id/ll_ll3"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@mipmap/fujintu3" />
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
 
-                <ImageView
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ll4"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@mipmap/fujintu3" />
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@mipmap/fujintu3" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/fujintu3" />
 
 
-            </LinearLayout>
+                </LinearLayout>
 
-
-            <!--</RelativeLayout>-->
+            </FrameLayout>
 
 
         </LinearLayout>

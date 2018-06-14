@@ -14,7 +14,7 @@ import android.widget.RelativeLayout;
 public class MainActivity extends AppCompatActivity {
 
 
-    private LinearLayout ll_ll,ll_ll2;
+    private LinearLayout ll_ll,ll_ll2,ll_ll3,ll_ll4;
     private RelativeLayout rl,rl2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ll_ll = findViewById(R.id.ll_ll);
         ll_ll2 = findViewById(R.id.ll_ll2);
+        ll_ll3 = findViewById(R.id.ll_ll3);
+        ll_ll4 = findViewById(R.id.ll_ll4);
         rl = findViewById(R.id.rl);
         rl2 = findViewById(R.id.rl2);
 //        rl.setRotationX(70);
@@ -49,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
 //        }).show();
 
 
+        viewset();
+
+    }
+
+    private void viewset() {
         rl.setRotationY(50);
         rl2.setRotationY(-50);
 
@@ -72,6 +79,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+        ll_ll3.post(new Runnable() {
+            @Override
+            public void run() {
+                TranslateAnimation animation = new TranslateAnimation(0,  ll_ll3.getWidth(),0.0f, 0);
+                animation.setDuration(3000);
+                ll_ll3.startAnimation(animation);
+            }
+        });
+
+
+
+        ll_ll4.post(new Runnable() {
+            @Override
+            public void run() {
+                TranslateAnimation animation = new TranslateAnimation( -ll_ll4.getWidth(),0, 0.0f, 0);
+                animation.setDuration(3000);
+                ll_ll4.startAnimation(animation);
+            }
+        });
     }
 
 
