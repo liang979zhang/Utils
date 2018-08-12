@@ -63,7 +63,10 @@ public class QrManager {
 
     public LeadTextCallBack mCallBack;
 
-
+    /**
+     * 扫描界面底部的扫一扫按钮的点击事件
+     * @return
+     */
     public LeadTextCallBack getCallBack() {
         return  mCallBack;
     }
