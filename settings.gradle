@@ -1,1 +1,1 @@
-include ':app', ':cctools'
+include ':app', ':cctools', ':zbarlibary'

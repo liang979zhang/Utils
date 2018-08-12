@@ -1,0 +1,82 @@
+https://github.com/xhy123/zBarLibary-master  参见这个
+.识别二维码（条形码）
+        QrConfig qrConfig = new QrConfig.Builder()
+                .setDesText("(识别二维码)")//扫描框下文字
+                .setShowDes(false)//是否显示扫描框下面文字
+                .setShowLight(true)//显示手电筒按钮
+                .setShowTitle(true)//显示Title
+                .setShowAlbum(true)//显示从相册选择按钮
+                .setCornerColor(Color.WHITE)//设置扫描框颜色
+                .setLineColor(Color.WHITE)//设置扫描线颜色
+                .setLineSpeed(QrConfig.LINE_MEDIUM)//设置扫描线速度
+                .setScanType(QrConfig.TYPE_QRCODE)//设置扫码类型（二维码，条形码，全部，自定义，默认为二维码）
+                .setScanViewType(QrConfig.SCANVIEW_TYPE_QRCODE)//设置扫描框类型（二维码还是条形码，默认为二维码）
+                .setCustombarcodeformat(QrConfig.BARCODE_I25)//此项只有在扫码类型为TYPE_CUSTOM时才有效
+                .setPlaySound(true)//是否扫描成功后bi~的声音
+                .setDingPath(R.raw.test)//设置提示音(不设置为默认的Ding~)
+                .setIsOnlyCenter(true)//是否只识别框中内容(默认为全屏识别)
+                .setTitleText("扫描二维码")//设置Tilte文字
+                .setTitleBackgroudColor(Color.BLUE)//设置状态栏颜色
+                .setTitleTextColor(Color.BLACK)//设置Title文字颜色
+                .create();
+        QrManager.getInstance().init(qrConfig).startScan(MainActivity.this, new QrManager.OnScanResultCallback() {
+            @Override
+            public void onScanSuccess(String result) {
+                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        如果扫描界面不符合你的需求，来吧QRActivity的布局文件你随便改，保证改起来比别的库简单！
+
+
+2.生成码
+2.1生成二维码
+Bitmap qrCode = QRUtils.getInstance().createQRCode("www.qq.com");
+2.1.1生成二维码并添加Logo
+Bitmap qrCode = QRUtils.getInstance().createQRCodeAddLogo(et_qr_content.getText().toString(),BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
+2.2生成条形码
+QRUtils.TextViewConfig textViewConfig = new QRUtils.TextViewConfig();
+textViewConfig.setSize(10);
+ Bitmap barCodeWithText = QRUtils.getInstance().createBarCodeWithText(getApplicationContext(), content, 300, 100, textVie
+
+
+
+ 3.识别本地
+ 3.1 识别本地二维码
+ //可以传图片路径，Bitmap,ImageView 是不是很人性化
+ String s = QRUtils.getInstance().decodeQRcode(iv_qr);
+ 3.2 识别本地条形码
+ //可以传图片路径，Bitmap,ImageView 是不是很人性化
+ String s = QRUtils.getInstance().decodeBarcode(iv_qr);
+
+
+
+
+ 4.参数描述
+ name	format	description
+ setDesText	String	设置扫描框下方描述文字
+ setShowDes	Boolean	设置是否显示扫描框下方描述文字
+ setShowLight	Boolean	是否开启手电筒功能
+ setShowAlbum	Boolean	是否开启从相册选择功能
+ setShowTitle	Boolean	是否显示Title
+ setTitleText	String	设置Title文字
+ setTitleBackgroudColor	int	设置Title背景色
+ setTitleTextColor	int	设置Title文字颜色
+ setCornerColor	int	设置扫描框颜色
+ setLineColor	int	设置扫描线颜色
+ setLineSpeed	int	设置扫描线速度
+ QrConfig.LINE_FAST(快速)
+ QrConfig.LINE_MEDIUM(中速
+ QrConfig.LINE_SLOW(慢速)
+ setScanType	int	设置扫描类型
+ QrConfig.TYPE_QRCODE(二维码)
+ QrConfig.TYPE_BARCODE(条形码)
+ QrConfig.TYPE_ALL(全部类型)
+ QrConfig.TYPE_CUSTOM(指定类型)
+ setScanViewType	int	设置扫描框类型
+ QrConfig.SCANVIEW_TYPE_QRCODE(二维码)
+ QrConfig.SCANVIEW_TYPE_BARCODE(条形码)
+ setCustombarcodeformat	int	设置指定扫码类型（举例：QrConfig.BARCODE_EAN13）,此项只有在ScanType设置为自定义时才生效
+ setIsOnlyCenter	Boolean	设置是否只识别扫描框中的内容（默认为全屏扫描）
+ setPlaySound	Boolean	设置扫描成功后是否有提示音
+ setDingPath	int	自定义提示音（举例：R.raw.test，不设置为默认的)
