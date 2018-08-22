@@ -4,8 +4,6 @@ group = 'com.github.liang979zhang'
 android {
     compileSdkVersion 26
 
-
-
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 26
@@ -26,14 +24,14 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation 'com.android.support:design:26.1.0'
-    implementation files('libs/commons-lang3-3.7.jar')
-    implementation 'com.google.code.gson:gson:2.2.4'
+    provided fileTree(include: ['*.jar'], dir: 'libs')
+    provided 'com.android.support:appcompat-v7:26.1.0'
+    testProvided 'junit:junit:4.12'
+    androidTestProvided 'com.android.support.test:runner:1.0.1'
+    androidTestProvided 'com.android.support.test.espresso:espresso-core:3.0.1'
+    provided 'com.android.support:design:26.1.0'
+    provided files('libs/commons-lang3-3.7.jar')
+    provided 'com.google.code.gson:gson:2.2.4'
 }
 
 // 指定编码
