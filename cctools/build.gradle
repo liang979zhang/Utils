@@ -25,13 +25,13 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testProvided 'junit:junit:4.12'
-    androidTestCompile 'com.android.support.test:runner:1.0.1'
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation files('libs/commons-lang3-3.7.jar')
-    provided 'com.google.code.gson:gson:2.2.4'
-    provided 'com.android.support:appcompat-v7:26.1.0'
-    provided 'com.android.support:design:26.1.0'
+    testCompileOnly 'junit:junit:4.12'
+    androidTestCompileOnly 'com.android.support.test:runner:1.0.1'
+    androidTestCompileOnly 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compileOnly files('libs/commons-lang3-3.7.jar')
+    compileOnly 'com.google.code.gson:gson:2.2.4'
+    compileOnly 'com.android.support:appcompat-v7:26.1.0'
+    compileOnly 'com.android.support:design:26.1.0'
 }
 
 // 指定编码
