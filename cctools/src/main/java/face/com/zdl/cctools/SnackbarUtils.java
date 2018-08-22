@@ -150,7 +150,7 @@ public class SnackbarUtils {
                 snackbarWeakReference = new WeakReference<>(Snackbar.make(parent, text, Snackbar.LENGTH_INDEFINITE).setDuration(duration));
         }
         View view = snackbarWeakReference.get().getView();
-        ((TextView) view.findViewById(R.id.snackbar_text)).setTextColor(textColor);
+//        ((TextView) view.findViewById(R.id.snackbar_text)).setTextColor(textColor);
         view.setBackgroundColor(bgColor);
         if (actionText != null && actionText.length() > 0 && listener != null) {
             snackbarWeakReference.get().setActionTextColor(actionTextColor);
