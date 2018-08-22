@@ -24,14 +24,14 @@ android {
 }
 
 dependencies {
-    provided fileTree(include: ['*.jar'], dir: 'libs')
-    provided 'com.android.support:appcompat-v7:26.1.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testProvided 'junit:junit:4.12'
-    androidTestProvided 'com.android.support.test:runner:1.0.1'
-    androidTestProvided 'com.android.support.test.espresso:espresso-core:3.0.1'
-    provided 'com.android.support:design:26.1.0'
-    provided files('libs/commons-lang3-3.7.jar')
+    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation files('libs/commons-lang3-3.7.jar')
     provided 'com.google.code.gson:gson:2.2.4'
+    provided 'com.android.support:appcompat-v7:26.1.0'
+    provided 'com.android.support:design:26.1.0'
 }
 
 // 指定编码
