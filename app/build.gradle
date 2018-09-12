@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -24,11 +25,20 @@ dependencies {
         exclude group: 'com.android.support-v7'
     }
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:support-vector-drawable:26.1.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     //    implementation project(':cctools')
     implementation project(':cctools')
     //    implementation 'org.greenrobot:eventbus:3.0.0'
-    implementation project(':zbarlibary')
+
+//    implementation 'com.github.liang979zhang:ZbarUtils:1.1'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
+    // Retrofit库
+    implementation 'com.squareup.okhttp3:okhttp:3.1.2'
+    // Okhttp库
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 }

@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_main);
         ll_ll = findViewById(R.id.ll_ll);
         ll_ll2 = findViewById(R.id.ll_ll2);
@@ -40,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
         rl2 = findViewById(R.id.rl2);
 //        rl.setRotationX(70);
 
-        View view = LayoutInflater.from(this).inflate(R.layout.view1, null,false);
-        View view2 = LayoutInflater.from(this).inflate(R.layout.view2, null,false);
-        View view3 = LayoutInflater.from(this).inflate(R.layout.view3, null,false);
-        View view4 = LayoutInflater.from(this).inflate(R.layout.view4, null,false);
-        View view5 = LayoutInflater.from(this).inflate(R.layout.view4, null,false);
-        View view6 = LayoutInflater.from(this).inflate(R.layout.view4, null,false);
+        View view = LayoutInflater.from(this).inflate(R.layout.view1, null, false);
+        View view2 = LayoutInflater.from(this).inflate(R.layout.view2, null, false);
+        View view3 = LayoutInflater.from(this).inflate(R.layout.view3, null, false);
+        View view4 = LayoutInflater.from(this).inflate(R.layout.view4, null, false);
+        View view5 = LayoutInflater.from(this).inflate(R.layout.view4, null, false);
+        View view6 = LayoutInflater.from(this).inflate(R.layout.view4, null, false);
 
         viewlist.add(view);
         viewlist.add(view2);
@@ -84,8 +82,23 @@ public class MainActivity extends AppCompatActivity {
 
 //        startActivity(new Intent(this, SecondActivity.class));
 
-    }
 
+//        XXPermissions.with(this).constantRequest().permission(new String[]{Manifest.permission.CAMERA}).request(new OnPermission() {
+//            @Override
+//            public void hasPermission(List<String> granted, boolean isAll) {
+//
+//            }
+//
+//            @Override
+//            public void noPermission(List<String> denied, boolean quick) {
+//
+//            }
+//        });
+
+
+
+
+    }
 
 
     private void viewset() {
